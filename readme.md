@@ -99,8 +99,12 @@ png diagram saved to: diagram.png
 ### Example Bot Comments
 
 #### Successful Execution
-> Justification process completed successfully!
-> </detail>
+> Justification process completed!
+> <details><summary>View Generated Diagram</summary>
+> ![Generated Diagram](https://raw.githubusercontent.com/.../diagram.svg)
+> 
+> [Download Diagram Artifact](https://github.com/.../artifacts/...)
+></details>
 
 
 #### Failed Execution
