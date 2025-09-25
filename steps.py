@@ -60,7 +60,7 @@ def check_pep8_compliance(produce, notebook_file_path: str) -> bool:
 def check_quality_gates(produce, is_pep8_compliant: bool, is_linear_execution_order: bool) -> bool:
     quality_gates_met = is_pep8_compliant and is_linear_execution_order
     produce("are_quality_gates_met", quality_gates_met)
-    return quality_gates_met
+    return False
 
 
 ## Evidence: Notebook file exists
