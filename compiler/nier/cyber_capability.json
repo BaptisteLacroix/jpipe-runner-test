@@ -1,0 +1,76 @@
+{
+  "elements": [
+    {
+      "id": "verify_ctf_cap_acceptable",
+      "label": "Verify CTF Challenges capability is acceptable",
+      "type": "strategy"
+    },
+    {
+      "id": "headlesslinux_distro",
+      "label": "HeadlessLinux distribution used for CTF",
+      "type": "evidence"
+    },
+    {
+      "id": "verify_adversfine_cap_cybersec_acceptable",
+      "label": "Aggregate all the models evaluations in terms of cybersecurity capabilities ",
+      "type": "strategy"
+    },
+    {
+      "id": "curated_ctf_challenges_list",
+      "label": "Curated CTF challenges list",
+      "type": "evidence"
+    },
+    {
+      "id": "ctf_cap_acceptable",
+      "label": "CTF Challenges capability is acceptable",
+      "type": "sub-conclusion"
+    },
+    {
+      "id": "ctf_eval_results",
+      "label": "CTF Challenges evaluation results",
+      "type": "evidence"
+    },
+    {
+      "id": "adversfine_cap_cybersec_acceptable",
+      "label": "Adversarially Finetuned models capability in Cybersecurity is acceptable",
+      "type": "conclusion"
+    },
+    {
+      "id": "threshold_for_model_ctf_performance",
+      "label": "Threshold for CTF model performance",
+      "type": "evidence"
+    }
+  ],
+  "name": "cyber_capability",
+  "relations": [
+    {
+      "source": "headlesslinux_distro",
+      "target": "verify_ctf_cap_acceptable"
+    },
+    {
+      "source": "curated_ctf_challenges_list",
+      "target": "verify_ctf_cap_acceptable"
+    },
+    {
+      "source": "ctf_eval_results",
+      "target": "verify_ctf_cap_acceptable"
+    },
+    {
+      "source": "threshold_for_model_ctf_performance",
+      "target": "verify_ctf_cap_acceptable"
+    },
+    {
+      "source": "ctf_cap_acceptable",
+      "target": "verify_adversfine_cap_cybersec_acceptable"
+    },
+    {
+      "source": "verify_ctf_cap_acceptable",
+      "target": "ctf_cap_acceptable"
+    },
+    {
+      "source": "verify_adversfine_cap_cybersec_acceptable",
+      "target": "adversfine_cap_cybersec_acceptable"
+    }
+  ],
+  "type": "justification"
+}
