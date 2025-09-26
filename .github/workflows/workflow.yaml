@@ -26,7 +26,7 @@ jobs:
           version: feat/v3.1.0
           embed_image: "true"
           image_branch: "diagram-images"
-          jd_file: justification.jd.json
+          jd_file: compiler/nier/cyber_capability.json
           config-file: config.yaml
-          library: steps.py
+          library: compiler/nier/cyber_capability.py
           github-token: ${{ secrets.GITHUB_TOKEN }}
