@@ -1,6 +1,11 @@
 {
   "elements": [
     {
+      "id": "cyber_range",
+      "label": "Cyber Range capability is acceptable",
+      "type": "evidence"
+    },
+    {
       "id": "verify_ctf_cap_acceptable",
       "label": "Verify CTF Challenges capability is acceptable",
       "type": "strategy"
@@ -12,7 +17,7 @@
     },
     {
       "id": "verify_adversfine_cap_cybersec_acceptable",
-      "label": "Aggregate all the models evaluations in terms of cybersecurity capabilities ",
+      "label": "Aggregate all the models evaluations in terms of cybersecurity capabilities",
       "type": "strategy"
     },
     {
@@ -58,6 +63,10 @@
     {
       "source": "threshold_for_model_ctf_performance",
       "target": "verify_ctf_cap_acceptable"
+    },
+    {
+      "source": "cyber_range",
+      "target": "verify_adversfine_cap_cybersec_acceptable"
     },
     {
       "source": "ctf_cap_acceptable",
