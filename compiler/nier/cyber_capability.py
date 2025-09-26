@@ -30,7 +30,7 @@ def verify_ctf_challenges_capability_is_acceptable(
 @jpipe(produce=["test6"])
 def headless_linux_distribution_used_for_ctf(produce: Callable[[str, Any], None]) -> bool:
     produce("test6", "test6")
-    return True
+    return False
 
 ## Strategy verify_adversfine_cap_cybersec_acceptable
 @jpipe(consume=["test5", "test7"])
