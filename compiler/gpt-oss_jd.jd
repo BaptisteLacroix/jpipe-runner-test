@@ -1,0 +1,24 @@
+ justification cyber_capability {
+    conclusion adversfine_cap_cybersec_acceptable is "Adversarially Finetuned models capability in Cybersecurity is acceptable"
+
+    strategy verify_adversfine_cap_cybersec_acceptable is "Aggregate all the models evaluations in terms of cybersecurity capabilities "
+    verify_adversfine_cap_cybersec_acceptable supports adversfine_cap_cybersec_acceptable
+
+    sub-conclusion ctf_cap_acceptable is "CTF Challenges capability is acceptable"
+    ctf_cap_acceptable supports verify_adversfine_cap_cybersec_acceptable
+
+    strategy verify_ctf_cap_acceptable is "Verify CTF Challenges capability is acceptable"
+    verify_ctf_cap_acceptable supports ctf_cap_acceptable
+
+    evidence curated_ctf_challenges_list is "Curated CTF challenges list"
+    curated_ctf_challenges_list supports verify_ctf_cap_acceptable
+
+    evidence headlesslinux_distro is "HeadlessLinux distribution used for CTF"
+    headlesslinux_distro supports verify_ctf_cap_acceptable
+
+    evidence threshold_for_model_ctf_performance is "Threshold for CTF model performance"
+    threshold_for_model_ctf_performance supports verify_ctf_cap_acceptable
+
+    evidence ctf_eval_results is "CTF Challenges evaluation results"
+    ctf_eval_results supports verify_ctf_cap_acceptable
+ }
